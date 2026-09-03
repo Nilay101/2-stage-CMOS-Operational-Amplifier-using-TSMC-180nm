@@ -1,2 +1,1 @@
-# Analog-Design-Practice
-This repository consists all of my analog circuit design simulated in spice software
+##Design of 2 stage CMOS Operational Amplifier
