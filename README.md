@@ -5,7 +5,7 @@
 This repository contains the complete design, hand calculations, and LTspice verification for a custom two-stage CMOS operational amplifier designed in a standard 180nm process. The architecture utilizes a differential input pair with an active current mirror load, followed by a common-source second stage and Miller pole-splitting compensation.
 
 ### Schematic Overview
-![Op-Amp Schematic](MetaData/OpAmp.png)
+![Op-Amp Schematic](https://github.com/Nilay101/2-stage-CMOS-Operational-Amplifier-using-TSMC-180nm/blob/8f856c964e84322b60da62ed8a50cbd44d4179bd/Images/opamp_circuit.png)
 *Figure 1: Transistor-level schematic of the two-stage amplifier with Miller compensation.*
 
 ---
