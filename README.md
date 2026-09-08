@@ -98,5 +98,5 @@ Scaling from M4 to achieve this massive transconductance:
 $$(\frac{W}{L})_6 = \mathbf{149}$$
 
 $$(\frac{W}{L})_7 = \frac{I_7}{I_5} (\frac{W}{L})_5 = \mathbf{45}$$
+
 ---
-*Verified via LTspice using 180nm foundry models.*
