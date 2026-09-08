@@ -28,7 +28,7 @@ The amplifier was designed to balance high-speed transient response with strict 
 ### Simulation Results
 
 **AC Analysis (Frequency Response)**
-![Frequency Response](MetaData/Frequency-Response.png)
+![Frequency Response](https://github.com/Nilay101/2-stage-CMOS-Operational-Amplifier-using-TSMC-180nm/blob/0c627e89c1676f51f423bb5c631afdf741973f50/Images/waveform.png)
 *Figure 2: Bode plot demonstrating a DC gain of >68 dB, a GBW of >30 MHz, and a Phase Margin of >60° across the input common-mode range.*
 
 **Transient Analysis (Slew Rate)**
