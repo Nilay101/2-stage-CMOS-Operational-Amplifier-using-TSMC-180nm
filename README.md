@@ -50,17 +50,3 @@ Simulated using **LTspice** with BSIM3 Level 49 models.
 * **DC Operating Point:** All transistors remain biased in the active (saturation) region across common-mode limits.
 
 ---
-
-## Repository Structure
-
-```text
-├── Calculations/
-│   └── design_calculations.pdf   # Analytical sizing equations & derivations
-├── Images/
-│   ├── opamp_circuit.png         # Transistor-level schematic
-│   └── waveform.png              # AC open-loop magnitude and phase plot
-├── LTspice/
-│   ├── models/                   # BSIM3 Level 49 transistor model files
-│   ├── schematic/                # .asc schematic files
-│   └── simulations/              # Simulation setups (.ac, .tran, .op)
-└── README.md
