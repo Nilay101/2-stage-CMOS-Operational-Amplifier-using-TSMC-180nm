@@ -31,10 +31,6 @@ The amplifier was designed to balance high-speed transient response with strict 
 ![Frequency Response](https://github.com/Nilay101/2-stage-CMOS-Operational-Amplifier-using-TSMC-180nm/blob/0c627e89c1676f51f423bb5c631afdf741973f50/Images/waveform.png)
 *Figure 2: Bode plot demonstrating a DC gain of >68 dB, a GBW of >30 MHz, and a Phase Margin of >60° across the input common-mode range.*
 
-**Transient Analysis (Slew Rate)**
-![Slew Rate](MetaData/Slew-Rate.png)
-*Figure 3: Large-signal step response in a unity-gain buffer configuration, confirming a rising-edge slew rate of 28 V/µs.*
-
 ---
 
 ##  Comprehensive Hand Calculations
@@ -102,17 +98,5 @@ Scaling from M4 to achieve this massive transconductance:
 $$(\frac{W}{L})_6 = \mathbf{149}$$
 
 $$(\frac{W}{L})_7 = \frac{I_7}{I_5} (\frac{W}{L})_5 = \mathbf{45}$$
-
----
-
-##  Simulation Tuning & Silicon Trade-offs
-
-During LTspice `.op` and `.ac` verification with Level 49 models, physical non-idealities required strategic tuning of the calculated aspect ratios:
-
-1. **The Power Budget Crisis:** The initial second-stage sizing ($W_7 = 45\text{ µm}$) drew 157 µA of current, causing the total chip power dissipation to violate the 300 µW budget.
-2. **The High-Impedance Tug-of-War:** To save power, the NMOS sinker (M7) width was throttled down. This starved the PMOS driver (M6) and pushed it into the triode region, destroying the voltage gain.
-3. **The Balance:** A rigorous tuning sweep was performed on M6 (74.5 µm $\to$ 63 µm $\to$ 128 µm $\to$ 63 µm) and M7 (22.5 µm $\to$ 14.25 µm $\to$ 40 µm $\to$ 20 µm) until the output node balanced perfectly, restoring deep saturation and pushing the DC gain back to $\ge 68\text{ dB}$.
-4. **Parasitic Capacitance Limits:** Channel lengths ($L$) were tested at 1 µm to boost output resistance, but the quadrupled gate capacitance choked the GBW at the ICMR- boundary. The design was rolled back to the 500 nm baseline, which successfully secured the 30 MHz GBW across all process corners. 
-
 ---
 *Verified via LTspice using 180nm foundry models.*
